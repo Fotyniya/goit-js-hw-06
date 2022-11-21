@@ -14,23 +14,11 @@ const images = [
 ];
 
 const ulEl = document.querySelector('.gallery')
-console.log(ulEl)
 
-const imagesEl = images.map(image => {
-  const imgEl = document.createElement('img');
-  imgEl.src = image.url;
-  imgEl.alt = image.alt;
-  
-  console.log(imgEl)
-  return imgEl
-})
-console.log(imagesEl)
- 
-const markup = imagesEl
-  .map((img) => `<li>${img}</li>`)
+const markup = images
+  .map((image) => `<li><img src = ${image.url} alt = ${image.alt}></li>`)
   .join("");
   
-  console.log(markup)
 ulEl.insertAdjacentHTML('afterbegin', markup)
 
 
