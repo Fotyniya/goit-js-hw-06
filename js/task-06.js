@@ -4,7 +4,7 @@ textInput.addEventListener("input", onInputChange)
 textInput.addEventListener("blur", onInputBlur)
 
 function onInputChange (event){
-    console.log (event.currentTarget.value);
+    
     textInput.classList.remove("invalid", "valid") 
 }    
 function onInputBlur (event){ 
