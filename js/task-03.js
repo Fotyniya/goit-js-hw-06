@@ -16,10 +16,11 @@ const images = [
 const ulEl = document.querySelector('.gallery')
 
 const markup = images
-  .map((image) => `<li><img src = ${image.url} alt = ${image.alt}></li>`)
+  .map((image) => `<li><img src = ${image.url} alt = ${image.alt} width = 300></li>`)
   .join("");
   
 ulEl.insertAdjacentHTML('afterbegin', markup)
 
+ulEl.style.display = 'grid';
 
 

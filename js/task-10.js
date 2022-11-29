@@ -10,19 +10,18 @@ console.dir (inputEl)
 buttonCreateEl.addEventListener('click', ()=>createBoxes(inputEl.value));
 buttonDestroyEl.addEventListener('click', ()=>destroyBoxes());
 
-const usersElements = [];
+
 function createBoxes(amount){
-  
+  const usersElements = [];
   for (let i = 0; i < amount; i += 1){
     const usersEl = document.createElement("div");
     usersEl.style.width = `${Number(30 + i*10)}px`;
     usersEl.style.height = `${Number(30 + i*10)}px`;
     usersEl.style.backgroundColor = getRandomHexColor();
-    usersElements.push(usersEl)
+    usersElements.push(usersEl);
   }
     boxes.append(...usersElements);
-    
 }
 function destroyBoxes(){
-  boxes.innerHTML = ''
+  boxes.innerHTML = '';
 }
