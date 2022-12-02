@@ -6,10 +6,9 @@ const inputEl = document.querySelector("#controls input");
 const buttonCreateEl = document.querySelector("button[data-create]");
 const buttonDestroyEl = document.querySelector("button[data-destroy]");
 const boxes = document.querySelector("#boxes");
-console.dir (inputEl)
+
 buttonCreateEl.addEventListener('click', ()=>createBoxes(inputEl.value));
 buttonDestroyEl.addEventListener('click', ()=>destroyBoxes());
-
 
 function createBoxes(amount){
   const usersElements = [];

@@ -3,9 +3,8 @@ const textOutput = document.querySelector("#name-output");
 
 const hello = textOutput.textContent;
 
-textInput.addEventListener("input", (event) => {
-    textInput.value ? 
-    textOutput.textContent = event.currentTarget.value :
-    textOutput.textContent = hello; 
+textInput.addEventListener("input", () => {
+    const val = textInput.value.trim();
+    textOutput.textContent = val ? val : hello;
 } 
 );
